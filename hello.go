@@ -147,13 +147,37 @@ func mergeSort() {
 	fmt.Println("Sorted: ", devide(mergeSlice))
 }
 
+func drawTriangle() {
+	var n int
+
+	fmt.Println("Enter n:")
+	fmt.Scan(&n)
+	fmt.Println("***********Pattern using maps**********")
+
+	for i := 1; i <= n; i++ {
+		for j := 1; j <= n-i; j++ {
+			fmt.Print(" ")
+		}
+		for k := i; k > 0; k-- {
+			fmt.Print(strconv.Itoa(k))
+		}
+		if i != 1 {
+			for l := 2; l <= i; l++ {
+				fmt.Print(strconv.Itoa(l))
+			}
+		}
+		fmt.Print("\n")
+	}
+}
+
 func main() {
 	var i int
 	for {
-		fmt.Println("*****Choose the function you want to perform:")
+		fmt.Println("\n*****Choose the function you want to perform:")
 		fmt.Println("1: Draw Pattern")
 		fmt.Println("2: Factorial of n")
 		fmt.Println("3: Merge sort")
+		fmt.Println("4: Draw triangle")
 		fmt.Scan(&i)
 
 		switch i {
@@ -163,6 +187,8 @@ func main() {
 			factorial()
 		case 3:
 			mergeSort()
+		case 4:
+			drawTriangle()
 		default:
 			fmt.Println("Enter the correct option number")
 		}
