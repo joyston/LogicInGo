@@ -1,6 +1,7 @@
 package main
 
 import (
+	binarytree "example/hello/binaryTree"
 	"fmt"
 	"strconv"
 )
@@ -178,6 +179,7 @@ func main() {
 		fmt.Println("2: Factorial of n")
 		fmt.Println("3: Merge sort")
 		fmt.Println("4: Draw triangle")
+		fmt.Println("5: Binary Tree")
 		fmt.Scan(&i)
 
 		switch i {
@@ -189,6 +191,8 @@ func main() {
 			mergeSort()
 		case 4:
 			drawTriangle()
+		case 5:
+			binarytree.ImplementBinaryTree()
 		default:
 			fmt.Println("Enter the correct option number")
 		}
