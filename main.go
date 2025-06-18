@@ -1,6 +1,7 @@
 package main
 
 import (
+	a "example/hello/anagram"
 	binarytree "example/hello/binaryTree"
 	"fmt"
 	"strconv"
@@ -180,6 +181,7 @@ func main() {
 		fmt.Println("3: Merge sort")
 		fmt.Println("4: Draw triangle")
 		fmt.Println("5: Binary Tree")
+		fmt.Println("6: Anagram")
 		fmt.Scan(&i)
 
 		switch i {
@@ -193,6 +195,8 @@ func main() {
 			drawTriangle()
 		case 5:
 			binarytree.ImplementBinaryTree()
+		case 6:
+			a.Anagram()
 		default:
 			fmt.Println("Enter the correct option number")
 		}
