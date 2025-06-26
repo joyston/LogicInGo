@@ -46,6 +46,5 @@ func Anagram() {
 		fmt.Println("TRUE: Strings S1 & S2 are Anagrams")
 	} else {
 		fmt.Println("FALSE: Strings S1 & S2 are NOT Anagrams")
-
 	}
 }
