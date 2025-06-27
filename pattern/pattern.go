@@ -39,39 +39,30 @@ func DrawPatternUsingMaps() {
 	if n == 1 {
 		fmt.Println("1")
 	} else {
-		rows := (2 * n)
+		// rows := (2 * n)
 
 		var pattern = make(map[int]string)
-		for i := 1; i <= rows; i++ {
+		for i := 1; i <= n; i++ {
+
 			pattern[i] = ""
 
 			//add space
-			for k := n - i; k > 0; k-- {
+			for j := 0; j < n-i; j++ {
 				pattern[i] = pattern[i] + " "
 			}
 
-			j := i
-			for len(pattern) <= n {
-				if j == 1 {
-					pattern[i] = pattern[i] + strconv.Itoa(j)
-					j++
-				}
-
-				if j > i {
-					break
-				} else if j > 1 {
-					pattern[i] = pattern[i] + strconv.Itoa(j)
-					j--
-				} else {
-					pattern[i] = pattern[i] + strconv.Itoa(j)
-					j++
-				}
-
+			for k := i; k > 1; k-- {
+				pattern[i] = pattern[i] + strconv.Itoa(k)
 			}
 
+			for m := 1; m <= i; m++ {
+				pattern[i] = pattern[i] + strconv.Itoa(m)
+			}
+			fmt.Println(pattern[i])
 		}
-		for _, v := range pattern {
-			fmt.Println(v)
+
+		for p := len(pattern) - 1; p > 0; p-- {
+			fmt.Println(pattern[p])
 		}
 	}
 }

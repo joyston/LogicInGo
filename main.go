@@ -116,7 +116,8 @@ func main() {
 
 		switch i {
 		case 1:
-			p.DrawPatternUsingMaps()
+			p.DrawPattern()
+			//p.DrawPatternUsingMaps()
 		case 2:
 			factorial()
 		case 3:
